@@ -297,10 +297,10 @@ public class ListQuizzer implements Iterable<MultipleChoiceQuestion> {
    * @return Iterator<MultipleChoiceQuestion>
    */
   public Iterator<MultipleChoiceQuestion> iterator() {
-    if (listingMode == ListingMode.CORRECT) {
+    if (listingMode.equals(listingMode.CORRECT) {
       return new CorrectQuestionsIterator(head);
     }
-    else if (listingMode == ListingMode.INCORRECT) {
+    else if (listingMode.equals(listingMode.INCORRECT)) {
       return new IncorrectQuestionsIterator(head);
     }
     else {

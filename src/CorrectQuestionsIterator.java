@@ -1,7 +1,7 @@
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
-public class CorrectQuestionsIterator extends QuizQuestionsIterator implements Iterator<MultipleChoiceQuestion>{
+public class CorrectQuestionsIterator extends QuizQuestionsIterator{
     private static final boolean CORRECT = true;
 
     private LinkedNode<MultipleChoiceQuestion> next;
@@ -31,11 +31,11 @@ public class CorrectQuestionsIterator extends QuizQuestionsIterator implements I
 
     public LinkedNode<MultipleChoiceQuestion> nextNode() throws NoSuchElementException {
         LinkedNode<MultipleChoiceQuestion> output = next;
-        boolean looking = true;
         if(!hasNext()) {
             throw new NoSuchElementException("end of the line");
         }
         try {
+            boolean looking = true;
             while(looking) {
                 next = super.nextNode();
                 if (next.getData().isCorrect() == CORRECT) {
