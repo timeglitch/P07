@@ -32,6 +32,9 @@ public class CorrectQuestionsIterator extends QuizQuestionsIterator implements I
     public LinkedNode<MultipleChoiceQuestion> nextNode() throws NoSuchElementException {
         LinkedNode<MultipleChoiceQuestion> output = next;
         boolean looking = true;
+        if(!hasNext()) {
+            throw new NoSuchElementException("end of the line");
+        }
         try {
             while(looking) {
                 next = super.nextNode();
