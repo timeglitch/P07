@@ -1,12 +1,11 @@
 import java.util.Iterator;
 import java.util.NoSuchElementException;
-import java.util.Arrays;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 import java.lang.Iterable;
 
-public class ListQuizzer {
+public class ListQuizzer implements Iterable<MultipleChoiceQuestion> {
   private LinkedNode<MultipleChoiceQuestion> head; // Head of this singly linked list
   private LinkedNode<MultipleChoiceQuestion> tail; // Tail of this singly linked list
   private int size; // Total number of MultipleChoiceQuestions stored in this ListQuizzer
