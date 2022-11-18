@@ -4,6 +4,7 @@ import java.util.Arrays;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
+import java.lang.Iterable;
 
 public class ListQuizzer {
   private LinkedNode<MultipleChoiceQuestion> head; // Head of this singly linked list
@@ -449,7 +450,6 @@ public class ListQuizzer {
 
     return loadedCount;
   }
-
 
   /**
    * Allows a user to take this quiz. The quiz should be taken on a deep copy of this ListQuizzer.
