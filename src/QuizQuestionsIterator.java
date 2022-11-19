@@ -1,6 +1,5 @@
 import java.util.Iterator;
 import java.util.NoSuchElementException;
-import java.lang.Iterable;
 
 public class QuizQuestionsIterator implements Iterator<MultipleChoiceQuestion> {
 
