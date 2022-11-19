@@ -37,7 +37,6 @@ public class IncorrectQuestionsIterator extends QuizQuestionsIterator implements
         if(!hasNext()) {
             throw new NoSuchElementException("end of the line");   
         }
-        boolean looking = true;
         next = next.getNext();
         while(hasNext() && next.getData().isCorrect()) {
             next = next.getNext();
